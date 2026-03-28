@@ -399,7 +399,7 @@ function App() {
 
   const login = async () => {
     try {
-      const response = await fetch("http://localhost:8000/login", {
+      const response = await fetch("https://smart-atm-backend-1.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ card_number: cardNumber, pin }),
@@ -420,7 +420,7 @@ function App() {
 
  const deposit = async () => {
   try {
-    const response = await fetch("http://localhost:8000/deposit", {
+    const response = await fetch("https://smart-atm-backend-1.onrender.com/deposit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -444,7 +444,7 @@ function App() {
 
   const withdraw = async () => {
   try {
-    const response = await fetch("http://localhost:8000/withdraw", {
+    const response = await fetch("https://smart-atm-backend-1.onrender.com/withdraw", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -467,7 +467,7 @@ function App() {
 };
   const loadTransactions = async () => {
     const response = await fetch(
-      `http://localhost:8000/transactions?card_number=${cardNumber}`
+      `https://smart-atm-backend-1.onrender.com/transactions?card_number=${cardNumber}`
     );
     const data = await response.json();
     setTransactions(data);
